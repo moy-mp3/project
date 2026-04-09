@@ -1,22 +1,32 @@
 function calculer() {
   let base = 25;
 
-  let contexte = parseInt(document.getElementById("contexte").value);
+  let ids = [
+    "contexte","look","attitude","corps","approche",
+    "timing","distance","voix","profil",
+    "similarite","social","duree","respect"
+  ];
+
+  let score = base;
+
+  ids.forEach(id => {
+    score += parseInt(document.getElementById(id).value);
+  });
+
+  // BONUS / MALUS AVANCÉS
   let attitude = parseInt(document.getElementById("attitude").value);
   let timing = parseInt(document.getElementById("timing").value);
-  let look = parseInt(document.getElementById("look").value);
+  let respect = parseInt(document.getElementById("respect").value);
 
-  let score = base + contexte + attitude + timing + look;
+  if (attitude === -60) score *= 0.3;
+  if (timing === -40) score *= 0.6;
+  if (respect === -80) score *= 0.2;
 
-  // BONUS / MALUS INTELLIGENTS
-  if (attitude === -60) score *= 0.3; // insistant
-  if (timing === -40) score *= 0.6; // occupé
-  if (contexte === 20 && timing === 25) score += 10; // combo parfait
+  if (score > 100) score = 100;
+  if (score < 0) score = 0;
 
-  // Limites
-  score = Math.max(0, Math.min(100, Math.round(score)));
+  score = Math.round(score);
 
-  // UI
   let resultat = document.getElementById("resultat");
   let bar = document.getElementById("bar");
   let conseil = document.getElementById("conseil");
@@ -24,21 +34,20 @@ function calculer() {
   resultat.innerText = score + " %";
   bar.style.width = score + "%";
 
-  // Couleurs
-  if (score < 20) bar.style.background = "red";
-  else if (score < 40) bar.style.background = "orange";
-  else if (score < 60) bar.style.background = "gold";
-  else if (score < 80) bar.style.background = "lime";
-  else bar.style.background = "green";
-
-  // Conseils dynamiques
-  if (score < 30) {
-    conseil.innerText = "❌ Mauvais contexte, change d’approche";
+  if (score < 20) {
+    bar.style.background = "red";
+    conseil.innerText = "❌ Refus quasi certain";
+  } else if (score < 40) {
+    bar.style.background = "orange";
+    conseil.innerText = "⚠️ Peu probable";
   } else if (score < 60) {
-    conseil.innerText = "🤔 Ça peut passer, améliore ton timing";
+    bar.style.background = "gold";
+    conseil.innerText = "🤔 Mitigé";
   } else if (score < 80) {
-    conseil.innerText = "✅ Bonne situation";
+    bar.style.background = "lime";
+    conseil.innerText = "✅ Bonne chance";
   } else {
-    conseil.innerText = "🔥 Conditions parfaites";
+    bar.style.background = "green";
+    conseil.innerText = "🔥 Très favorable";
   }
 }
