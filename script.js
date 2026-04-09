@@ -4,21 +4,41 @@ function calculer() {
   let contexte = parseInt(document.getElementById("contexte").value);
   let attitude = parseInt(document.getElementById("attitude").value);
   let timing = parseInt(document.getElementById("timing").value);
+  let look = parseInt(document.getElementById("look").value);
 
-  let score = base + contexte + attitude + timing;
+  let score = base + contexte + attitude + timing + look;
 
-  // Limite entre 0 et 100
-  if (score > 100) score = 100;
-  if (score < 0) score = 0;
+  // BONUS / MALUS INTELLIGENTS
+  if (attitude === -60) score *= 0.3; // insistant
+  if (timing === -40) score *= 0.6; // occupé
+  if (contexte === 20 && timing === 25) score += 10; // combo parfait
 
-  // Affichage
+  // Limites
+  score = Math.max(0, Math.min(100, Math.round(score)));
+
+  // UI
   let resultat = document.getElementById("resultat");
-  resultat.innerText = "Résultat : " + score + " %";
+  let bar = document.getElementById("bar");
+  let conseil = document.getElementById("conseil");
 
-  // Couleur dynamique
-  if (score < 20) resultat.style.color = "red";
-  else if (score < 40) resultat.style.color = "orange";
-  else if (score < 60) resultat.style.color = "gold";
-  else if (score < 80) resultat.style.color = "green";
-  else resultat.style.color = "darkgreen";
+  resultat.innerText = score + " %";
+  bar.style.width = score + "%";
+
+  // Couleurs
+  if (score < 20) bar.style.background = "red";
+  else if (score < 40) bar.style.background = "orange";
+  else if (score < 60) bar.style.background = "gold";
+  else if (score < 80) bar.style.background = "lime";
+  else bar.style.background = "green";
+
+  // Conseils dynamiques
+  if (score < 30) {
+    conseil.innerText = "❌ Mauvais contexte, change d’approche";
+  } else if (score < 60) {
+    conseil.innerText = "🤔 Ça peut passer, améliore ton timing";
+  } else if (score < 80) {
+    conseil.innerText = "✅ Bonne situation";
+  } else {
+    conseil.innerText = "🔥 Conditions parfaites";
+  }
 }
