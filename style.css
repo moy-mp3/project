@@ -9,8 +9,8 @@ body {
   background: rgba(255,255,255,0.1);
   padding: 30px;
   margin: 50px auto;
-  width: 320px;
-  border-radius: 15px;
+  width: 600px;
+  border-radius: 50px;
   backdrop-filter: blur(10px);
 }
 
@@ -40,7 +40,7 @@ button {
   height: 100%;
   width: 0%;
   border-radius: 10px;
-  transition: 0.5s;
+  transition: 1s;
 }
 
 #resultat {
@@ -50,6 +50,20 @@ button {
 
 #conseil {
   margin-top: 10px;
-  font-size: 14px;
+  font-size: 25px;
   opacity: 0.8;
+}
+
+.ligne {
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 50px auto;
+}
+
+.container1 {
+  background: rgba(255,255,255,0.1);
+  margin: 10px auto;
+  width: 600px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
 }
