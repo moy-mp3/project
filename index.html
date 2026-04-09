@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculateur social</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>:bar_chart: Calculateur de chances</h1>
+
+    <!-- CONTEXTE -->
+    <label>Contexte :</label>
+    <select id="contexte">
+      <option value="20">Parc (+20)</option>
+      <option value="0">Rue (0)</option>
+      <option value="-15">Transport (-15)</option>
+      <option value="30">Soirée (+30)</option>
+    </select>
+
+    <!-- ATTITUDE -->
+    <label>Attitude :</label>
+    <select id="attitude">
+      <option value="30">Calme (+30)</option>
+      <option value="0">Neutre (0)</option>
+      <option value="-15">Stressé (-15)</option>
+      <option value="-60">Insistant (-60)</option>
+    </select>
+
+    <!-- TIMING -->
+    <label>Timing :</label>
+    <select id="timing">
+      <option value="25">Détendu (+25)</option>
+      <option value="-40">Occupé (-40)</option>
+    </select>
+
+    <!-- BOUTON -->
+    <button onclick="calculer()">Calculer</button>
+
+    <!-- RESULTAT -->
+    <div id="resultat">Résultat : -- %</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
