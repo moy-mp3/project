@@ -2,46 +2,123 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Calculateur social</title>
+  <title>Calculateur Social</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div class="container">
-    <h1>Calculateur de chances</h1>
+<div class="container">
+  <h1>📊 Calculateur Social</h1>
 
-    <!-- CONTEXTE -->
-    <label>Contexte :</label>
-    <select id="contexte">
-      <option value="20">Parc</option>
-      <option value="0">Rue</option>
-      <option value="-15">Transport</option>
-      <option value="30">Soirée</option>
-    </select>
+  <!-- CONTEXTE -->
+  <select id="contexte">
+    <option value="20">Parc</option>
+    <option value="0">Rue</option>
+    <option value="-15">Transport</option>
+    <option value="30">Soirée</option>
+    <option value="-20">Nuit</option>
+    <option value="25">File d’attente</option>
+  </select>
 
-    <!-- ATTITUDE -->
-    <label>Attitude :</label>
-    <select id="attitude">
-      <option value="30">Calme</option>
-      <option value="0">Neutre</option>
-      <option value="-15">Stressé</option>
-      <option value="-60">Insistant</option>
-    </select>
+  <!-- LOOK -->
+  <select id="look">
+    <option value="20">Propre</option>
+    <option value="25">Stylé</option>
+    <option value="-30">Négligé</option>
+    <option value="-20">Excentrique</option>
+    <option value="15">Bonne hygiène</option>
+  </select>
 
-    <!-- TIMING -->
-    <label>Timing :</label>
-    <select id="timing">
-      <option value="25">Détendu</option>
-      <option value="-40">Occupé</option>
-    </select>
+  <!-- ATTITUDE -->
+  <select id="attitude">
+    <option value="30">Calme</option>
+    <option value="0">Neutre</option>
+    <option value="-15">Stressé</option>
+    <option value="-60">Insistant</option>
+    <option value="25">Chaleureux</option>
+  </select>
 
-    <!-- BOUTON -->
-    <button onclick="calculer()">Calculer</button>
+  <!-- LANGAGE CORPOREL -->
+  <select id="corps">
+    <option value="20">Regard naturel</option>
+    <option value="-10">Regard fuyant</option>
+    <option value="-30">Regard intense</option>
+    <option value="15">Posture ouverte</option>
+    <option value="-15">Posture fermée</option>
+  </select>
 
-    <!-- RESULTAT -->
-    <div id="resultat">Résultat : -- %</div>
+  <!-- APPROCHE -->
+  <select id="approche">
+    <option value="30">Simple</option>
+    <option value="20">Originale</option>
+    <option value="-10">Maladroite</option>
+    <option value="-50">Lourde</option>
+    <option value="15">Humour</option>
+  </select>
+
+  <!-- TIMING -->
+  <select id="timing">
+    <option value="25">Détendu</option>
+    <option value="-40">Occupé</option>
+    <option value="30">Moment social</option>
+  </select>
+
+  <!-- DISTANCE -->
+  <select id="distance">
+    <option value="15">Respectée</option>
+    <option value="-40">Trop proche</option>
+    <option value="-50">Surprise</option>
+  </select>
+
+  <!-- VOIX -->
+  <select id="voix">
+    <option value="20">Calme</option>
+    <option value="-15">Stressée</option>
+    <option value="-30">Agressive</option>
+  </select>
+
+  <!-- PROFIL -->
+  <select id="profil">
+    <option value="30">Sociable</option>
+    <option value="-20">Timide</option>
+    <option value="-40">Mauvaise expérience</option>
+  </select>
+
+  <!-- SIMILITUDE -->
+  <select id="similarite">
+    <option value="20">Similaire</option>
+    <option value="-15">Différent</option>
+  </select>
+
+  <!-- CONTEXTE SOCIAL -->
+  <select id="social">
+    <option value="20">Seule</option>
+    <option value="-20">En groupe</option>
+  </select>
+
+  <!-- DURÉE -->
+  <select id="duree">
+    <option value="25">Courte</option>
+    <option value="-40">Trop longue</option>
+  </select>
+
+  <!-- RESPECT -->
+  <select id="respect">
+    <option value="40">Respect</option>
+    <option value="-80">Insistance</option>
+  </select>
+
+  <button onclick="calculer()">Calculer</button>
+
+  <div class="bar-container">
+    <div id="bar"></div>
   </div>
 
-  <script src="script.js"></script>
+  <div id="resultat">-- %</div>
+  <div id="conseil"></div>
+
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
