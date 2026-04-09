@@ -11,115 +11,278 @@
   <h1>Calculateur Social</h1>
 
   <!-- CONTEXTE -->
-  <label>Lieu :</label>
-  <select id="contexte">
-    <option value="20">Parc</option>
-    <option value="0">Rue</option>
-    <option value="-15">Transport</option>
-    <option value="30">Soirée</option>
-    <option value="-20">Nuit</option>
-    <option value="25">File d’attente</option>
-  </select>
+<div class="container1">
+<h3 style="text-align: center;">Lieu</h3>
+  <div class="ligne">
+    <div>
+      <select id="contexte">
+      <option value="0"></option>
+        <option value="20">Parc</option>
+        <option value="0">Rue</option>
+        <option value="-15">Transport</option>
+        <option value="30">Soirée</option>
+        <option value="-20">Nuit</option>
+        <option value="25">File d’attente</option>
+      </select>
+    </div>
+  </div>
+</div>
 
   <!-- LOOK -->
-  <label>Style vestimentaire :</label>
-  <select id="look">
-    <option value="20">Propre</option>
-    <option value="25">Stylé</option>
-    <option value="-30">Négligé</option>
-    <option value="-20">Excentrique</option>
-    <option value="15">Bonne hygiène</option>
-  </select>
+<div class="container1">
+<h3 style="text-align: center;">Style vestimentaire</h3>
+  <div class="ligne">
+    <div>
+      <label for="look1">Abordeur</label>
+      <select id="look1">
+        <option value="0"></option>
+        <option value="20">Propre</option>
+        <option value="25">Stylé</option>
+        <option value="-30">Négligé</option>
+        <option value="-20">Excentrique</option>
+        <option value="15">Bonne hygiène</option>
+      </select>
+    </div>
 
-  <!-- ATTITUDE -->
-  <label>Attitude :</label>
-  <select id="attitude">
-    <option value="30">Calme</option>
-    <option value="0">Neutre</option>
-    <option value="-15">Stressé</option>
-    <option value="-60">Insistant</option>
-    <option value="25">Chaleureux</option>
-  </select>
+    <div>
+      <label for="look2">Interlocuteur</label>
+      <select id="look2">
+        <option value="0"></option>
+        <option value="20">Propre</option>
+        <option value="25">Stylé</option>
+        <option value="-30">Négligé</option>
+        <option value="-20">Excentrique</option>
+        <option value="15">Bonne hygiène</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+ <!-- ATTITUDE -->
+<div class="container1">
+<h3 style="text-align: center;">Attitude</h3>
+  <div class="ligne">
+    <div>
+      <label for="attitude1">Abordeur</label>
+      <select id="attitude1">
+        <option value="0"></option>
+        <option value="30">Calme</option>
+        <option value="0">Neutre</option>
+        <option value="-15">Stressé</option>
+        <option value="-60">Insistant</option>
+        <option value="25">Chaleureux</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="attitude2">Interlocuteur</label>
+      <select id="attitude2">
+        <option value="0"></option>
+        <option value="30">Calme</option>
+        <option value="0">Neutre</option>
+        <option value="-15">Stressé</option>
+        <option value="-60">Insistant</option>
+        <option value="25">Chaleureux</option>
+      </select>
+    </div>
+  </div>
+</div>
 
   <!-- LANGAGE CORPOREL -->
-  <label>Langage corporel :</label>
-  <select id="corps">
-    <option value="20">Regard naturel</option>
-    <option value="-10">Regard fuyant</option>
-    <option value="-30">Regard intense</option>
-    <option value="15">Posture ouverte</option>
-    <option value="-15">Posture fermée</option>
-  </select>
+<div class="container1">
+<h3 style="text-align: center;">Langage corporel</h3>
+  <div class="ligne">
+    <div>
+      <label for="corps1">Abordeur</label>
+      <select id="corps1">
+        <option value="0"></option>
+        <option value="20">Regard naturel</option>
+        <option value="-10">Regard fuyant</option>
+        <option value="-30">Regard intense</option>
+        <option value="15">Posture ouverte</option>
+        <option value="-15">Posture fermée</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="corps2">Interlocuteur</label>
+      <select id="corps2">
+        <option value="0"></option>
+        <option value="20">Regard naturel</option>
+        <option value="-10">Regard fuyant</option>
+        <option value="-30">Regard intense</option>
+        <option value="15">Posture ouverte</option>
+        <option value="-15">Posture fermée</option>
+      </select>
+    </div>
+  </div>
+</div>
 
   <!-- APPROCHE -->
-  <label>Type d'approche :</label>
-  <select id="approche">
-    <option value="30">Simple</option>
-    <option value="20">Originale</option>
-    <option value="-10">Maladroite</option>
-    <option value="-50">Lourde</option>
-    <option value="15">Humour</option>
-  </select>
+<div class="container1">
+<h3 style="text-align: center;">Type d'approche</h3>
+  <div class="ligne">
+    <div>
+      <select id="approche">
+        <option value="0"></option>
+        <option value="30">Simple</option>
+        <option value="20">Originale</option>
+        <option value="-10">Maladroite</option>
+        <option value="-50">Lourde</option>
+        <option value="15">Humour</option>
+      </select>
+    </div>
+  </div>
+</div>
 
   <!-- TIMING -->
-  <label>Timing :</label>
-  <select id="timing">
-    <option value="25">Détendu</option>
-    <option value="-40">Occupé</option>
-    <option value="30">Moment social</option>
-  </select>
+<div class="container1">
+<h3 style="text-align: center;">Timing</h3>
+  <div class="ligne">
+    <div>
+      <select id="timing">
+        <option value="0"></option>
+        <option value="25">Détendu</option>
+        <option value="-40">Occupé</option>
+        <option value="30">Moment social</option>
+      </select>
+    </div>
+  </div>
+</div>
 
   <!-- DISTANCE -->
-  <label>Distance :</label>
-  <select id="distance">
-    <option value="15">Respectée</option>
-    <option value="-40">Trop proche</option>
-    <option value="-50">Surprise</option>
-  </select>
+<div class="container1">
+<h3 style="text-align: center;">Distance</h3>
+  <div class="ligne">
+    <div>
+      <select id="distance">
+        <option value="0"></option>
+        <option value="15">Respectée</option>
+        <option value="-40">Trop proche</option>
+        <option value="-50">Surprise</option>
+      </select>
+    </div>
+  </div>
+</div>
 
   <!-- VOIX -->
-  <label>Voix :</label>
-  <select id="voix">
-    <option value="20">Calme</option>
-    <option value="-15">Stressée</option>
-    <option value="-30">Agressive</option>
-  </select>
+<div class="container1">
+<h3 style="text-align: center;">Voix</h3>
+  <div class="ligne">
+    <div>
+      <label for="voix1">Abordeur</label>
+      <select id="voix1">
+        <option value="0"></option>
+        <option value="20">Calme</option>
+        <option value="-15">Stressée</option>
+        <option value="-30">Agressive</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="voix2">Interlocuteur</label>
+      <select id="voix2">
+        <option value="0"></option>
+        <option value="20">Calme</option>
+        <option value="-15">Stressée</option>
+        <option value="-30">Agressive</option>
+      </select>
+    </div>
+  </div>
+</div>
 
   <!-- PROFIL -->
-  <label>Profil :</label>
-  <select id="profil">
-    <option value="30">Sociable</option>
-    <option value="-20">Timide</option>
-    <option value="-40">Mauvaise expérience</option>
-  </select>
+<div class="container1">
+<h3 style="text-align: center;">Profil</h3>
+  <div class="ligne">
+    <div>
+      <label for="profil2">Interlocuteur</label>
+      <select id="profil2">
+        <option value="0"></option>
+        <option value="30">Sociable</option>
+        <option value="-20">Timide</option>
+        <option value="-40">Mauvaise expérience</option>
+      </select>
+    </div>
+  </div>
+</div>
 
   <!-- SIMILITUDE -->
-  <label>Similitude :</label>
-  <select id="similarite">
-    <option value="20">Similaire</option>
-    <option value="-15">Différent</option>
-  </select>
+<div class="container1">
+<h3 style="text-align: center;">Similitude</h3>
+  <div class="ligne">
+    <div>
+      <select id="similarite">
+        <option value="0"></option>
+        <option value="20">Similaire</option>
+        <option value="-15">Différent</option>
+      </select>
+    </div>
+  </div>
+</div>
 
   <!-- CONTEXTE SOCIAL -->
-  <label>Contexte social :</label>
-  <select id="social">
-    <option value="20">Seule</option>
-    <option value="-20">En groupe</option>
-  </select>
+<div class="container1">
+<h3 style="text-align: center;">Contexte social</h3>
+  <div class="ligne">
+    <div>
+      <label for="social1">Abordeur</label>
+      <select id="social1">
+        <option value="0"></option>
+        <option value="20">Seule</option>
+        <option value="-20">En groupe</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="social2">Interlocuteur</label>
+      <select id="social2">
+        <option value="0"></option>
+        <option value="20">Seule</option>
+        <option value="-20">En groupe</option>
+      </select>
+    </div>
+  </div>
+</div>
 
   <!-- DURÉE -->
-  <label>Durée :</label>
-  <select id="duree">
-    <option value="25">Courte</option>
-    <option value="-40">Trop longue</option>
-  </select>
+<div class="container1">
+<h3 style="text-align: center;">Durée</h3>
+  <div class="ligne">
+    <div>
+      <select id="duree">
+        <option value="0"></option>
+        <option value="25">Courte</option>
+        <option value="-40">Trop longue</option>
+      </select>
+    </div>
+  </div>
+</div>
 
   <!-- RESPECT -->
-  <label>Respect :</label>
-  <select id="respect">
-    <option value="40">Respect</option>
-    <option value="-80">Insistance</option>
-  </select>
+<div class="container1">
+<h3 style="text-align: center;">Respect</h3>
+  <div class="ligne">
+    <div>
+      <label for="respect1">Abordeur</label>
+      <select id="respect1">
+        <option value="0"></option>
+        <option value="40">Respect</option>
+        <option value="-80">Insistance</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="respect2">Interlocuteur</label>
+      <select id="respect2">
+        <option value="0"></option>
+        <option value="40">Respect</option>
+        <option value="-80">Insistance</option>
+      </select>
+    </div>
+  </div>
+</div>
+
 
   <button onclick="calculer()">Calculer</button>
 
