@@ -2,9 +2,9 @@ function calculer() {
   let base = 25;
 
   let ids = [
-    "contexte","look","attitude","corps","approche",
-    "timing","distance","voix","profil",
-    "similarite","social","duree","respect"
+    "contexte","look1","attitude1","corps1","approche",
+    "timing","distance","voix1","profil2",
+    "similarite","social1","duree","respect1"
   ];
 
   let score = base;
@@ -14,9 +14,9 @@ function calculer() {
   });
 
   // BONUS / MALUS AVANCÉS
-  let attitude = parseInt(document.getElementById("attitude").value);
+  let attitude = parseInt(document.getElementById("attitude1").value);
   let timing = parseInt(document.getElementById("timing").value);
-  let respect = parseInt(document.getElementById("respect").value);
+  let respect = parseInt(document.getElementById("respect1").value);
 
   if (attitude === -60) score *= 0.3;
   if (timing === -40) score *= 0.6;
