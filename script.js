@@ -1,49 +1,159 @@
 function calculer() {
-  let base = 25;
+  let base = 0;
 
-  let ids = [
-    "contexte","look1","attitude1","corps1","approche",
-    "timing","distance","voix1","profil2",
-    "similarite","social1","duree","respect1"
+  let ids1 = [
+    "contexte","genre1","taille1","look1","attitude1","corps1","corps11","approche",
+    "timing","distance","voix1","voix2","profil2",
+    "similarite","social1","social2","duree","respect1","respect2"
   ];
 
-  let score = base;
+    let ids2 = [
+    "genre2","look2","attitude2","corps2","corps22"
+  ];
 
-  ids.forEach(id => {
-    score += parseInt(document.getElementById(id).value);
+  let score1 = base;
+
+  ids1.forEach(id => {
+    score1 += parseInt(document.getElementById(id).value);
   });
 
-  // BONUS / MALUS AVANCÉS
-  let attitude = parseInt(document.getElementById("attitude1").value);
+// HOMME FEMME TAILLE
+  let genre1 = parseInt(document.getElementById("genre1").value);
+  let genre2 = parseInt(document.getElementById("genre2").value);
+  let taille1 = parseInt(document.getElementById("taille1").value);
+
+  if (genre1 === 1 && genre2 === 1) {score1 +=20; // HOMME HOMME
+    if (taille1 === 1) {score1 += 0}
+    if (taille1 === 2) {score1 += 0}
+    if (taille1 === 3) {score1 += 0}
+    if (taille1 === 4) {score1 += 0}
+    if (taille1 === 5) {score1 += 0}
+    if (taille1 === 6) {score1 += 0}
+    if (taille1 === 7) {score1 += 0}
+    } 
+  if (genre1 === 1 && genre2 === 2) {score1 +=10; // HOMME AUTRE
+    if (taille1 === 1) {score1 += 0}
+    if (taille1 === 2) {score1 += 0}
+    if (taille1 === 3) {score1 += 0}
+    if (taille1 === 4) {score1 += 0}
+    if (taille1 === 5) {score1 += 0}
+    if (taille1 === 6) {score1 += 0}
+    if (taille1 === 7) {score1 += 0}
+    } 
+  if (genre1 === 1 && genre2 === 20) {score1 +=0; // HOMME FEMME
+    if (taille1 === 1) {score1 -= 60}
+    if (taille1 === 2) {score1 -= 50}
+    if (taille1 === 3) {score1 -= 30}
+    if (taille1 === 4) {score1 -= 10}
+    if (taille1 === 5) {score1 += 10}
+    if (taille1 === 6) {score1 += 40}
+    if (taille1 === 7) {score1 += 30}
+    } 
+
+  if (genre1 === 2 && genre2 === 2) {score1 +=20; // AUTRE AUTRE
+    if (taille1 === 1) {score1 += 0}
+    if (taille1 === 2) {score1 += 0}
+    if (taille1 === 3) {score1 += 0}
+    if (taille1 === 4) {score1 += 0}
+    if (taille1 === 5) {score1 += 0}
+    if (taille1 === 6) {score1 += 0}
+    if (taille1 === 7) {score1 += 0}
+    }
+  if (genre1 === 2 && genre2 === 1) {score1 +=10; // AUTRE HOMME
+    if (taille1 === 1) {score1 -= 15}
+    if (taille1 === 2) {score1 -= 10}
+    if (taille1 === 3) {score1 -= 5}
+    if (taille1 === 4) {score1 += 0}
+    if (taille1 === 5) {score1 += 10}
+    if (taille1 === 6) {score1 += 10}
+    if (taille1 === 7) {score1 += 0}
+    }
+  if (genre1 === 2 && genre2 === 20) {score1 +=15; // AUTRE FEMME
+    if (taille1 === 1) {score1 += 5}
+    if (taille1 === 2) {score1 += 10}
+    if (taille1 === 3) {score1 += 5}
+    if (taille1 === 4) {score1 += 0}
+    if (taille1 === 5) {score1 += 10}
+    if (taille1 === 6) {score1 += 10}
+    if (taille1 === 7) {score1 += 0}
+    }
+
+  if (genre1 === 20 && genre2 === 20) {score1 +=20; // FEMME FEMME
+    if (taille1 === 1) {score1 += 0}
+    if (taille1 === 2) {score1 += 0}
+    if (taille1 === 3) {score1 += 0}
+    if (taille1 === 4) {score1 += 0}
+    if (taille1 === 5) {score1 += 0}
+    if (taille1 === 6) {score1 += 0}
+    if (taille1 === 7) {score1 += 0}
+    }
+  if (genre1 === 20 && genre2 === 1) {score1 +=10; // FEMME HOMME
+    if (taille1 === 1) {score1 += 0}
+    if (taille1 === 2) {score1 += 10}
+    if (taille1 === 3) {score1 += 30}
+    if (taille1 === 4) {score1 += 15}
+    if (taille1 === 5) {score1 -= 10}
+    if (taille1 === 6) {score1 -= 20}
+    if (taille1 === 7) {score1 -= 40}
+    } 
+  if (genre1 === 20 && genre2 === 2) {score1 +=20; // FEMME AUTRE
+    if (taille1 === 1) {score1 += 0}
+    if (taille1 === 2) {score1 += 0}
+    if (taille1 === 3) {score1 += 0}
+    if (taille1 === 4) {score1 += 0}
+    if (taille1 === 5) {score1 += 0}
+    if (taille1 === 6) {score1 += 0}
+    if (taille1 === 7) {score1 += 0}
+    }
+
+// LOOK
+  let look1 = parseInt(document.getElementById("look1").value);
+  let look2 = parseInt(document.getElementById("look2").value);
+  if (look1 === look2) {score1 += 15} else {score1 -= 15}
+
+// ATTITUDE
+  let attitude2 = parseInt(document.getElementById("attitude2").value);
+  if (attitude2 < 0 ) {score1 -=10} else {score1 +=5}
+
+// CORPS
+  let corps2 = parseInt(document.getElementById("corps2").value);
+  let corps22 = parseInt(document.getElementById("corps22").value);
+
+  if (corps2 < 0 ) {score1 -=40} else {score1 +=10}
+  if (corps22 < 0 ) {score1 -=40} else {score1 +=10}
+
+// TEMPS
   let timing = parseInt(document.getElementById("timing").value);
-  let respect = parseInt(document.getElementById("respect1").value);
+  let duree = parseInt(document.getElementById("duree").value);
 
-  if (attitude === -60) score *= 0.3;
-  if (timing === -40) score *= 0.6;
-  if (respect === -80) score *= 0.2;
+  if (timing < 0 && duree < 0) {score1 -=11}
+  if (timing < 0 && duree > 0) {score1 +=6}
+  if (timing > 0 && duree < 0) {score1 +=11}
+  if (timing > 0 && duree > 0) {score1 +=6}
 
-  if (score > 100) score = 100;
-  if (score < 0) score = 0;
 
-  score = Math.round(score);
+if (score1 > 100) score1 = 100;
+if (score1 < 0) score1 = 0;
+
+  score1 = Math.round(score1);
 
   let resultat = document.getElementById("resultat");
   let bar = document.getElementById("bar");
   let conseil = document.getElementById("conseil");
 
-  resultat.innerText = score + " %";
-  bar.style.width = score + "%";
+  resultat.innerText = score1 + " %";
+  bar.style.width = score1 + "%";
 
-  if (score < 20) {
+  if (score1 < 20) {
     bar.style.background = "red";
     conseil.innerText = "❌ Refus quasi certain";
-  } else if (score < 40) {
+  } else if (score1 < 40) {
     bar.style.background = "orange";
     conseil.innerText = "⚠️ Peu probable";
-  } else if (score < 60) {
+  } else if (score1 < 60) {
     bar.style.background = "gold";
     conseil.innerText = "🤔 Mitigé";
-  } else if (score < 80) {
+  } else if (score1 < 80) {
     bar.style.background = "lime";
     conseil.innerText = "✅ Bonne chance";
   } else {
