@@ -23,6 +23,59 @@
         <option value="30">Soirée</option>
         <option value="-20">Nuit</option>
         <option value="25">File d’attente</option>
+        <option value="5">Couloir</option>
+        <option value="-10">Cantine</option>
+        <option value="-5">Restaurant</option>
+        <option value="15">Centre Commercial</option>
+        <option value="10">Concert</option>
+        <option value="25">Festival</option>
+        <option value="15">Plage</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+  <!-- GENRE -->
+<div class="container1">
+<h3 style="text-align: center;">Genre</h3>
+  <div class="ligne">
+    <div>
+      <label for="genre1">Abordeur</label>
+      <select id="genre1">
+        <option value="0"></option>
+        <option value="1">Homme</option>
+        <option value="10">Femme</option>
+        <option value="0">Autre</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="genre2">Interlocuteur</label>
+      <select id="genre2">
+        <option value="0"></option>
+        <option value="1">Homme</option>
+        <option value="10">Femme</option>
+        <option value="2">Autre</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+  <!-- TAILLE -->
+<div class="container1">
+<h3 style="text-align: center;">Taille</h3>
+  <div class="ligne">
+    <div>
+      <label for="taille1">Abordeur</label>
+      <select id="taille1">
+        <option value="0"></option>
+        <option value="1">-150cm</option>
+        <option value="2">150-160cm</option>
+        <option value="3">160-170cm</option>
+        <option value="4">170-180cm</option>
+        <option value="5">180-190cm</option>
+        <option value="6">190-200cm</option>
+        <option value="7">+200cm</option>
       </select>
     </div>
   </div>
@@ -36,11 +89,15 @@
       <label for="look1">Abordeur</label>
       <select id="look1">
         <option value="0"></option>
+        <option value="-250">Nu</option>
         <option value="20">Propre</option>
         <option value="25">Stylé</option>
         <option value="-30">Négligé</option>
-        <option value="-20">Excentrique</option>
-        <option value="15">Bonne hygiène</option>
+        <option value="0">Bariolé</option>
+        <option value="15">Simple</option>
+        <option value="15">Costume</option>
+        <option value="5">Costard Cravate</option>
+        <option value="30">Costard Cravate</option>
       </select>
     </div>
 
@@ -48,11 +105,15 @@
       <label for="look2">Interlocuteur</label>
       <select id="look2">
         <option value="0"></option>
+        <option value="-250">Nu</option>
         <option value="20">Propre</option>
         <option value="25">Stylé</option>
         <option value="-30">Négligé</option>
-        <option value="-20">Excentrique</option>
-        <option value="15">Bonne hygiène</option>
+        <option value="0">Bariolé</option>
+        <option value="15">Simple</option>
+        <option value="15">Costume</option>
+        <option value="5">Costard Cravate</option>
+        <option value="30">Costard Cravate</option>
       </select>
     </div>
   </div>
@@ -71,6 +132,9 @@
         <option value="-15">Stressé</option>
         <option value="-60">Insistant</option>
         <option value="25">Chaleureux</option>
+        <option value="-25">Excentrique</option>
+        <option value="-30">Bruyant</option>
+        <option value="-45">Dépressif</option>
       </select>
     </div>
 
@@ -78,11 +142,14 @@
       <label for="attitude2">Interlocuteur</label>
       <select id="attitude2">
         <option value="0"></option>
-        <option value="30">Calme</option>
+        <option value="1">Calme</option>
         <option value="0">Neutre</option>
-        <option value="-15">Stressé</option>
-        <option value="-60">Insistant</option>
-        <option value="25">Chaleureux</option>
+        <option value="-1">Stressé</option>
+        <option value="-1">Insistant</option>
+        <option value="1">Chaleureux</option>
+        <option value="1">Excentrique</option>
+        <option value="-1">Bruyant</option>
+        <option value="1">Dépressif</option>
       </select>
     </div>
   </div>
@@ -99,11 +166,15 @@
         <option value="20">Regard naturel</option>
         <option value="-10">Regard fuyant</option>
         <option value="-30">Regard intense</option>
+      </select>
+    </div>
+    <div>
+      <select id="corps11">
+        <option value="0"></option>
         <option value="15">Posture ouverte</option>
         <option value="-15">Posture fermée</option>
       </select>
     </div>
-
     <div>
       <label for="corps2">Interlocuteur</label>
       <select id="corps2">
@@ -111,6 +182,11 @@
         <option value="20">Regard naturel</option>
         <option value="-10">Regard fuyant</option>
         <option value="-30">Regard intense</option>
+      </select>
+    </div>
+    <div>
+      <select id="corps22">
+        <option value="0"></option>
         <option value="15">Posture ouverte</option>
         <option value="-15">Posture fermée</option>
       </select>
@@ -123,6 +199,7 @@
 <h3 style="text-align: center;">Type d'approche</h3>
   <div class="ligne">
     <div>
+      <label for="approche">Abordeur</label>
       <select id="approche">
         <option value="0"></option>
         <option value="30">Simple</option>
@@ -130,6 +207,10 @@
         <option value="-10">Maladroite</option>
         <option value="-50">Lourde</option>
         <option value="15">Humour</option>
+        <option value="-25">Peur</option>
+        <option value="-35">Flex</option>
+        <option value="5">Intelligent</option>
+        <option value="-10">Gaming</option>
       </select>
     </div>
   </div>
@@ -140,11 +221,11 @@
 <h3 style="text-align: center;">Timing</h3>
   <div class="ligne">
     <div>
+      <label for="timing">Interlocuteur</label>
       <select id="timing">
         <option value="0"></option>
         <option value="25">Détendu</option>
         <option value="-40">Occupé</option>
-        <option value="30">Moment social</option>
       </select>
     </div>
   </div>
@@ -157,9 +238,13 @@
     <div>
       <select id="distance">
         <option value="0"></option>
-        <option value="15">Respectée</option>
-        <option value="-40">Trop proche</option>
-        <option value="-50">Surprise</option>
+        <option value="-15">-1m</option>
+        <option value="15">1m</option>
+        <option value="10">2m</option>
+        <option value="-5">3m</option>
+        <option value="-20">5m</option>
+        <option value="-50">10m</option>
+        <option value="-60">+10m</option>
       </select>
     </div>
   </div>
@@ -174,8 +259,12 @@
       <select id="voix1">
         <option value="0"></option>
         <option value="20">Calme</option>
-        <option value="-15">Stressée</option>
+        <option value="-10">Stressée</option>
         <option value="-30">Agressive</option>
+        <option value="-20">Chanson</option>
+        <option value="-30">Cassée</option>
+        <option value="-30">Zozote</option>
+        <option value="-30">Bégaye</option>
       </select>
     </div>
 
@@ -183,9 +272,13 @@
       <label for="voix2">Interlocuteur</label>
       <select id="voix2">
         <option value="0"></option>
-        <option value="20">Calme</option>
-        <option value="-15">Stressée</option>
-        <option value="-30">Agressive</option>
+        <option value="5">Calme</option>
+        <option value="-10">Stressée</option>
+        <option value="-50">Agressive</option>
+        <option value="0">Chanson</option>
+        <option value="0">Cassée</option>
+        <option value="0">Zozote</option>
+        <option value="0">Bégaye</option>
       </select>
     </div>
   </div>
@@ -201,7 +294,7 @@
         <option value="0"></option>
         <option value="30">Sociable</option>
         <option value="-20">Timide</option>
-        <option value="-40">Mauvaise expérience</option>
+        <option value="-40">Fermé</option>
       </select>
     </div>
   </div>
@@ -230,7 +323,7 @@
       <select id="social1">
         <option value="0"></option>
         <option value="20">Seule</option>
-        <option value="-20">En groupe</option>
+        <option value="5">En groupe</option>
       </select>
     </div>
 
@@ -239,7 +332,7 @@
       <select id="social2">
         <option value="0"></option>
         <option value="20">Seule</option>
-        <option value="-20">En groupe</option>
+        <option value="-10">En groupe</option>
       </select>
     </div>
   </div>
@@ -252,8 +345,13 @@
     <div>
       <select id="duree">
         <option value="0"></option>
-        <option value="25">Courte</option>
-        <option value="-40">Trop longue</option>
+        <option value="1">-1min</option>
+        <option value="1">1min</option>
+        <option value="1">2min</option>
+        <option value="-1">5min</option>
+        <option value="-1">10min</option>
+        <option value="-1">15min</option>
+        <option value=-1>+15min</option>
       </select>
     </div>
   </div>
@@ -267,8 +365,8 @@
       <label for="respect1">Abordeur</label>
       <select id="respect1">
         <option value="0"></option>
-        <option value="40">Respect</option>
-        <option value="-80">Insistance</option>
+        <option value="10">Respectueux</option>
+        <option value="-40">Insistance</option>
       </select>
     </div>
 
@@ -276,8 +374,8 @@
       <label for="respect2">Interlocuteur</label>
       <select id="respect2">
         <option value="0"></option>
-        <option value="40">Respect</option>
-        <option value="-80">Insistance</option>
+        <option value="10">Respectueux</option>
+        <option value="-40">Insistance</option>
       </select>
     </div>
   </div>
@@ -296,5 +394,11 @@
 </div>
 
 <script src="script.js"></script>
+
+    <br>
+    <center>
+        <span><a href="#" class="container">Revenir en haut</a></span>
+    </center>
+    <br>
 </body>
 </html>
