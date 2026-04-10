@@ -12,6 +12,8 @@ body {
   width: 600px;
   border-radius: 50px;
   backdrop-filter: blur(10px);
+  color: white;
+  text-align: center;
 }
 
 select, button {
@@ -26,6 +28,8 @@ button {
   background: #00c9a7;
   color: white;
   cursor: pointer;
+  padding: 30px;
+  font-size: 30px;
 }
 
 .bar-container {
